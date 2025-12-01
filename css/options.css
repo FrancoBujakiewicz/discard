@@ -1,0 +1,78 @@
+
+ main {
+
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ main h1 {
+
+    margin-bottom: 45px;
+    font-size: 40px;
+
+ }
+
+ main article {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ div h2 {
+
+    width: 300px;
+    height: 100px;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    word-wrap: break-word;
+    line-height: 50px;
+
+ }
+
+ footer p {
+
+    text-align: center;
+    font-size: 17px;
+    padding: 0px 0px 10px 0px;
+
+ }
+
+ .option, .category {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s;
+
+ }
+
+ .option button, .category button {
+
+    background-color: #FFFFFF;
+    border-width: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ .option button {
+
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    box-shadow: 0 5px 20px #000000;
+    margin-bottom: 20px;
+
+ }
+
+ .option:hover, .category:hover { transform: scale(1.1); }
+
