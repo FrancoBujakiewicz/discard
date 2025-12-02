@@ -11,7 +11,10 @@
 
  main h1 {
 
-    margin-bottom: 45px;
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 40px;
 
  }
@@ -22,6 +25,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 
  }
 
@@ -36,6 +40,8 @@
     line-height: 50px;
 
  }
+
+ footer { margin-top: auto; }
 
  footer p {
 

@@ -1,0 +1,28 @@
+
+ {
+
+    "lang": [
+
+       "Bash.svg",
+       "C++.svg",
+       "Crystal.svg",
+       "Dart.svg",
+       "Fortran.svg",
+       "Haskell.svg",
+       "Java.svg",
+       "Julia.svg",
+       "Nim.svg",
+       "Nix.svg",
+       "Ruby.svg",
+       "Zig.svg"
+
+    ],
+
+    "linux": [],
+    "dev": [],
+    "framework": [],
+    "llm": [],
+    "person": []
+
+ }
+
