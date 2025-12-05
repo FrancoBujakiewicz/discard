@@ -43,11 +43,11 @@
 
  a img { margin: 0px 7.5px 0px 5px; }
 
- h1, h2, p, ul, #startBtn { color: #FFFFFF; }
+ h1, h2, p, ul, #startBtn, #endMessage { color: #FFFFFF; }
 
  button img { padding: 15px; }
 
- p {
+ p, #endMessage {
 
     font-size: 40px;
     font-weight: 600;

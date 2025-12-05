@@ -80,5 +80,14 @@
 
  }
 
- .option:hover, .category:hover { transform: scale(1.1); }
+ .option:hover, .category:hover, #endMessage:hover { transform: scale(1.1); }
+
+ #endMessage {
+
+    position: fixed;
+
+    text-align: center;
+    width: max-content;
+
+ }
 

@@ -24,11 +24,41 @@
              Transitions.toggle(DOM.mainContent);
              Transitions.toggle(DOM.footer);
 
-             const selectedCategory = category.id;
-             const actualPool = pool[selectedCategory];
+             const actualCategory = category.id;
+             const actualPool = pool[actualCategory];
 
-             DOM.options.forEach((option) => option.addEventListener
-             ("click", () => Transitions.show(DOM.optionsArticle)));
+             let count = 0;
+
+             DOM.img_1.src = `img/${actualCategory}/${actualPool[count]}`;
+             DOM.h2_1.textContent = actualPool[count].split(".")[0];
+             DOM.img_2.src = `img/${actualCategory}/${actualPool[count+1]}`;
+             DOM.h2_2.textContent = actualPool[count+1].split(".")[0];
+
+             count = count + 2;
+             DOM.options.forEach((option) =>
+
+                option.addEventListener("click", () => {
+
+                if(count < actualPool.length) {
+		Transitions.show(DOM.optionsArticle);
+                DOM.img_1.src = `img/${actualCategory}/${actualPool[count]}`;
+                DOM.h2_1.textContent = actualPool[count].split(".")[0];
+                DOM.img_2.src = `img/${actualCategory}/${actualPool[count+1]}`;
+                DOM.h2_2.textContent = actualPool[count+1].split(".")[0];
+                count = count + 2;
+                } else {
+
+                   Transitions.toggle(DOM.optionsArticle);
+	           Transitions.toggle(DOM.mainHeader);
+                   Transitions.toggle(DOM.footer);
+	           Transitions.toggle(DOM.endMessage);
+
+                }
+
+                })
+
+
+            );
 
           });
 
