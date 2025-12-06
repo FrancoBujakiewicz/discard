@@ -20,13 +20,21 @@
 
        DOM.categories.forEach((category) => {
 
-          category.addEventListener("click", async () => {
+         category.addEventListener("click", async () => {
 
+              const actualCategory = category.id;
+             const actualPool = pool[actualCategory];
+          let count = 0;
              Transitions.toggle(DOM.categorySection);
              Transitions.toggle(DOM.mainHeader);
              Transitions.toggle(DOM.footer);
 
              Transitions.toggle(DOM.loading);
+
+             DOM.img_1.src = `img/${actualCategory}/${actualPool[count]}`;
+             DOM.h2_1.textContent = actualPool[count].split(".")[0];
+             DOM.img_2.src = `img/${actualCategory}/${actualPool[count+1]}`;
+             DOM.h2_2.textContent = actualPool[count+1].split(".")[0];
 
                 await delay(10);
                 await delay(1000);
@@ -34,37 +42,26 @@
              Transitions.toggle(DOM.optionsArticle);
              Transitions.toggle(DOM.loading);
 
-             const actualCategory = category.id;
-             const actualPool = pool[actualCategory];
-
-             let count = 0;
-
-             DOM.img_1.src = `img/${actualCategory}/${actualPool[count]}`;
-             DOM.h2_1.textContent = actualPool[count].split(".")[0];
-             DOM.img_2.src = `img/${actualCategory}/${actualPool[count+1]}`;
-             DOM.h2_2.textContent = actualPool[count+1].split(".")[0];
-
              count = count + 2;
              DOM.options.forEach((option) =>
 
                 option.addEventListener("click", async () => {
 
-               
                 if(count < actualPool.length) {
 
 		Transitions.toggle(DOM.optionsArticle);
                 Transitions.toggle(DOM.loading);
 	        
+                DOM.img_1.src = `img/${actualCategory}/${actualPool[count]}`;
+                DOM.h2_1.textContent = actualPool[count].split(".")[0];
+                DOM.img_2.src = `img/${actualCategory}/${actualPool[count+1]}`;
+                DOM.h2_2.textContent = actualPool[count+1].split(".")[0];
+
                 await delay(10);
                 await delay(1000);
 
                 Transitions.toggle(DOM.loading);
 		Transitions.toggle(DOM.optionsArticle);
-
-                DOM.img_1.src = `img/${actualCategory}/${actualPool[count]}`;
-                DOM.h2_1.textContent = actualPool[count].split(".")[0];
-                DOM.img_2.src = `img/${actualCategory}/${actualPool[count+1]}`;
-                DOM.h2_2.textContent = actualPool[count+1].split(".")[0];
                 count = count + 2;
               
                 } else {
