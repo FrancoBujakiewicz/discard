@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import * as DOM from "./DOM.js";
 import * as Transitions from "./Transitions.js";
 import { Pool } from "./Pool.js";
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 window.addEventListener("DOMContentLoaded", () => __awaiter(void 0, void 0, void 0, function* () {
     DOM.init();
     const pool = yield Pool.new();
@@ -18,10 +19,15 @@ window.addEventListener("DOMContentLoaded", () => __awaiter(void 0, void 0, void
         Transitions.toggle(DOM.startSection);
         Transitions.toggle(DOM.categorySection);
         DOM.categories.forEach((category) => {
-            category.addEventListener("click", () => {
+            category.addEventListener("click", () => __awaiter(void 0, void 0, void 0, function* () {
                 Transitions.toggle(DOM.categorySection);
-                Transitions.toggle(DOM.mainContent);
+                Transitions.toggle(DOM.mainHeader);
                 Transitions.toggle(DOM.footer);
+                Transitions.toggle(DOM.loading);
+                yield delay(10);
+                yield delay(1000);
+                Transitions.toggle(DOM.optionsArticle);
+                Transitions.toggle(DOM.loading);
                 const actualCategory = category.id;
                 const actualPool = pool[actualCategory];
                 let count = 0;
@@ -30,9 +36,14 @@ window.addEventListener("DOMContentLoaded", () => __awaiter(void 0, void 0, void
                 DOM.img_2.src = `img/${actualCategory}/${actualPool[count + 1]}`;
                 DOM.h2_2.textContent = actualPool[count + 1].split(".")[0];
                 count = count + 2;
-                DOM.options.forEach((option) => option.addEventListener("click", () => {
+                DOM.options.forEach((option) => option.addEventListener("click", () => __awaiter(void 0, void 0, void 0, function* () {
                     if (count < actualPool.length) {
-                        Transitions.show(DOM.optionsArticle);
+                        Transitions.toggle(DOM.optionsArticle);
+                        Transitions.toggle(DOM.loading);
+                        yield delay(10);
+                        yield delay(1000);
+                        Transitions.toggle(DOM.loading);
+                        Transitions.toggle(DOM.optionsArticle);
                         DOM.img_1.src = `img/${actualCategory}/${actualPool[count]}`;
                         DOM.h2_1.textContent = actualPool[count].split(".")[0];
                         DOM.img_2.src = `img/${actualCategory}/${actualPool[count + 1]}`;
@@ -45,8 +56,8 @@ window.addEventListener("DOMContentLoaded", () => __awaiter(void 0, void 0, void
                         Transitions.toggle(DOM.footer);
                         Transitions.toggle(DOM.endMessage);
                     }
-                }));
-            });
+                })));
+            }));
         });
     });
 }));

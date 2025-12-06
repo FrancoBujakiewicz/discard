@@ -16,6 +16,7 @@
 
  let endMessage: HTMLElement;
  let mainHeader: HTMLHeadingElement;
+ let loading: HTMLElement;
 
  export {
 
@@ -32,7 +33,8 @@
     img_2,
     h2_2,
     endMessage,
-    mainHeader
+    mainHeader,
+    loading
 
  };
 
@@ -55,6 +57,7 @@
 
     endMessage = document.getElementById('endMessage')!;
     mainHeader = mainContent.querySelector('h1')!;
+    loading = mainContent.querySelector('p')!;
 
  }
 

@@ -12,7 +12,8 @@ let img_2;
 let h2_2;
 let endMessage;
 let mainHeader;
-export { startBtn, categorySection, categories, startSection, mainContent, optionsArticle, options, footer, img_1, h2_1, img_2, h2_2, endMessage, mainHeader };
+let loading;
+export { startBtn, categorySection, categories, startSection, mainContent, optionsArticle, options, footer, img_1, h2_1, img_2, h2_2, endMessage, mainHeader, loading };
 export function init() {
     startBtn = document.getElementById('startBtn');
     categorySection = document.getElementById('categories');
@@ -28,4 +29,5 @@ export function init() {
     h2_2 = options[1].querySelector("h2");
     endMessage = document.getElementById('endMessage');
     mainHeader = mainContent.querySelector('h1');
+    loading = mainContent.querySelector('p');
 }

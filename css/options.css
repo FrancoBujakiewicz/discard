@@ -1,7 +1,7 @@
 
  main {
 
-    flex: 2;
+    flex: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,11 +11,11 @@
 
  main h1 {
 
-    position: fixed;
+    position: absolute;
     top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 42%;
     font-size: 40px;
+    margin-top: 50px;
 
  }
 
@@ -25,7 +25,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 175px;
 
  }
 
@@ -82,12 +82,22 @@
 
  .option:hover, .category:hover, #endMessage:hover { transform: scale(1.1); }
 
- #endMessage {
+ #endMessage, main p {
 
-    position: fixed;
+    position: absolute;
 
     text-align: center;
     width: max-content;
+
+    left: 25.85%;
+    top: 45%;
+
+ }
+
+ main p {
+
+    left: 28.25%;
+    top: 52.5%;
 
  }
 
