@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 1200px;
+    width: 900px;
     height: 110px;
     font-size: 20px;
     flex-direction: column;
@@ -24,7 +24,7 @@
 
  ul {
 
-    font-size: 17.5px;
+    font-size: 18px;
     font-weight: 600;
     margin-left: 20px;
 

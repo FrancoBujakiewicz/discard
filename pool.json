@@ -18,7 +18,17 @@
 
     ],
 
-    "linux": [],
+    "linux": [
+
+       "Alpine Linux.png",
+       "Arch.svg",
+       "Artix Linux.svg",
+       "Debian.svg",
+       "Gentoo.svg",
+       "NixOS.svg"
+
+    ],
+
     "dev": [],
     "framework": [],
     "llm": [],

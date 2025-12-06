@@ -47,6 +47,8 @@
 
  button img { padding: 15px; }
 
+ .option img { padding: 0; }
+
  p, #endMessage {
 
     font-size: 40px;
