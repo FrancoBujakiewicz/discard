@@ -3,6 +3,9 @@
  import * as Transitions from "./Transitions.js"
  import { Pool } from "./Pool.js"
 
+ import { Option } from "./components/option/Option.js"
+
+ customElements.define('option-button', Option);
  const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
  window.addEventListener("DOMContentLoaded", async () => {
@@ -12,6 +15,13 @@
     const pool = await Pool.new();
 
     Transitions.toggle(DOM.startSection);
+
+   // await customElements.whenDefined('option-button');
+
+    const opt1 = document.getElementById('opt1')! as Option;
+    const opt2 = document.getElementById('opt2')! as Option;
+
+    const options = [opt1, opt2];
 
     DOM.startBtn.addEventListener("click", () => {
 
@@ -31,11 +41,14 @@
 
              Transitions.toggle(DOM.loading);
 
+             opt1.setContent(actualCategory, actualPool[count]);
+             opt2.setContent(actualCategory, actualPool[count+1]);
+             /*
              DOM.img_1.src = `img/${actualCategory}/${actualPool[count]}`;
              DOM.h2_1.textContent = actualPool[count].split(".")[0];
              DOM.img_2.src = `img/${actualCategory}/${actualPool[count+1]}`;
              DOM.h2_2.textContent = actualPool[count+1].split(".")[0];
-
+             */
                 await delay(10);
                 await delay(1000);
 
@@ -43,7 +56,7 @@
              Transitions.toggle(DOM.loading);
 
              count = count + 2;
-             DOM.options.forEach((option) =>
+             options.forEach((option, index) =>
 
                 option.addEventListener("click", async () => {
 
@@ -51,12 +64,15 @@
 
 		Transitions.toggle(DOM.optionsArticle);
                 Transitions.toggle(DOM.loading);
-	        
+	        /*
                 DOM.img_1.src = `img/${actualCategory}/${actualPool[count]}`;
                 DOM.h2_1.textContent = actualPool[count].split(".")[0];
                 DOM.img_2.src = `img/${actualCategory}/${actualPool[count+1]}`;
                 DOM.h2_2.textContent = actualPool[count+1].split(".")[0];
-
+                */
+             opt1.setContent(actualCategory, actualPool[count]);
+             opt2.setContent(actualCategory, actualPool[count+1]);
+ 
                 await delay(10);
                 await delay(1000);
 
