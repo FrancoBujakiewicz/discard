@@ -1,8 +1,15 @@
 
- export class Option extends HTMLElement {
+ import { FetchedContentComponent } from "../FetchedContentComponent.js"
+ import { state } from "../../State.js"
+ import * as DOM from "../../DOM.js";
+ import * as Transitions from "../../Transitions.js"
 
-    private img: HTMLImageElement;
-    private h2: HTMLHeadingElement;
+ export class Option extends HTMLElement
+
+ implements FetchedContentComponent<{ category: string; poolElement: string }> {
+
+    img: HTMLImageElement;
+    h2: HTMLHeadingElement;
 
     constructor() {
 
@@ -13,9 +20,34 @@
        this.img = this.querySelector('img')!;
        this.h2 = this.querySelector('h2')!;
 
+       this.addEventListener("click", async () => {
+
+          if(state.poolHasMore()) {
+
+             Transitions.toggle(DOM.optionDiv);
+
+             const { category, opt1, opt2 } = state.getCurrentPair();
+             await Transitions.showOptions(category, opt1, opt2);
+
+             state.advance();
+
+          } else {
+
+             Transitions.toggle(DOM.optionDiv);
+             Transitions.toggle(DOM.optionHeader);
+             Transitions.toggle(DOM.footer);
+
+             Transitions.toggle(DOM.endMessage);
+
+          }
+
+       });
+
     }
 
-    setContent(category: string, poolElement: string): void {
+    setContent({ category, poolElement }:
+
+    { category: string; poolElement: string }): void {
 
        this.img.src = `img/${category}/${poolElement}`;
        this.h2.textContent = poolElement.split(".")[0];

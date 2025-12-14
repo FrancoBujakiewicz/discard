@@ -13,9 +13,9 @@
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/visibility.css">
    <link rel="stylesheet" href="css/start.css">
-   <link rel="stylesheet" href="css/categories.css">
    <link rel="stylesheet" href="css/options.css">
    <link rel="stylesheet" href="src/components/option/Option.css">
+   <link rel="stylesheet" href="src/components/category/Category.css">
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,146 +36,42 @@
 
    </header>
 
-   <section class="hidden" id="startSection">
-
-    <h1>Discard</h1>
-
-    <p>
-     Consists of discard an option to save the other. You can choose by scope you want, objective, subjective, etc. Discarded options will not appear again.
-    </p>
-
-    <br>
-
-    <h1>Categories</h1>
-
-    <br>
-
-    <ul>
-
-     <li>Programming languages: Popular and exotic languages.</li>
-     <li>Linux distributions: No FreeBSD or others UNIX-like OS's.</li>
-     <li>Dev tools and mics: Miscellaneous like Git, Docker, etc.</li>
-     <li>Libs. and Frameworks: For Front and Back such: Vue or Spring.</li>
-     <li>Large Language Models: AI chats like ChatGPT and Claude.</li>
-     <li>Important tech persons: Idols from the past and present.</li>
-
-    </ul>
-
-    <br>
-    <br>
-    <br>
-
-    <button id="startBtn">Start</button>
-
-   </section>
-
-   <section class="hidden" id="categories">
-
-    <h1>Choose a category before you start</h1>
-
-    <article>
-
-     <div class="category" id="lang">
-
-      <button>
-
-       <img src="img/category/lang.png">
-       <h2>Programming Langs.</h2>
-
-      </button>
-
-     </div>
-
-     <div class="category" id="linux">
-
-      <button>
-
-       <img src="img/category/linux.png">
-       <h2>Linux Distributions</h2>
-
-      </button>
-
-     </div>
-
-     <div class="category" id="dev">
-
-      <button>
-
-       <img src="img/category/dev.png">
-       <h2>Dev tools and misc.</h2>
-
-      </button>
-
-     </div>
-
-     <div class="category" id="framework">
-
-      <button>
-
-       <img src="img/category/framework.png">
-       <h2>Libs. and Frameworks</h2>
-
-      </button>
-
-     </div>
-
-     <div class="category" id="llm">
-
-      <button>
-
-       <img src="img/category/llm.png">
-       <h2>AI LLM's</h2>
-
-      </button>
-
-     </div>
-
-     <div class="category" id="person">
-
-      <button>
-
-       <img src="img/category/person.jpg">
-       <h2>Important persons</h2>
-
-      </button>
-
-     </div>
-
-    </article>
-
-   </section>
+   <h1 class="hidden" id="optionHeader">Choose one</h1>
 
    <main>
 
-   <h1 class="hidden">Choose one</h1>
+    <section class="hidden" id="startSection">
 
-    <article id="optionsArticle" class="hidden">
-<!--
-     <div class="option">
+      <p>
+       Discard is a mini-game where you choose between two random options, like "which one would you save?". Choose based on any criteria you want. Before starting, pick a category:
+      </p>
 
-      <button><img width="145"></button>
-      <h2></h2>
+     <div>
+
+      <category-button id="lang">Programming languages</category-button>
+      <category-button id="linux">Linux distributions</category-button>
+      <category-button id="dev">Dev tools and miscellaneous</category-button>
+      <category-button id="framework">Libriaries and frameworks</category-button>
+      <category-button id="llm">Large Language Models</category-button>
+      <category-button id="person">Important tech persons</category-button>
 
      </div>
 
-     <div class="option">
+    </section>
 
-      <button><img width="145"></button>
-      <h2></h2>
+    <div id="options" class="hidden">
 
-     </div>
--->
+     <option-button></option-button>
+     <option-button></option-button>
 
-    <option-button id="opt1"></option-button>
-    <option-button id="opt2"></option-button>
-    </article>
+    </div>
 
     <a href="index.html" id="endMessage" class="hidden">
      No options left. Thanks for playing!
      <br>Click here to start again.
     </a>
 
-    <p class="hidden">Matching options, please wait...</p>
+    <p class="hidden" id="loading">Matching options, please wait...</p>
 
    </main>
 

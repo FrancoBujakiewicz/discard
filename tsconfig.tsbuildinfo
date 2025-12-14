@@ -1,0 +1,1 @@
+{"root":["./src/DOM.ts","./src/Discard.ts","./src/Pool.ts","./src/Transitions.ts","./src/components/FetchedContentComponent.ts","./src/components/category/Category.ts","./src/components/option/Option.ts"],"errors":true,"version":"5.9.3"}

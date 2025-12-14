@@ -1,52 +1,32 @@
 
- section {
+ #startSection {
 
-    flex: 2;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    column-gap: 80px;
 
  }
 
- section p {
+ #startSection p {
 
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 900px;
-    height: 110px;
-    font-size: 20px;
+    width: 500px;
+    font-size: 27.2px;
     flex-direction: column;
+    margin: 0;
 
  }
 
- ul {
+ #startSection div {
 
-    font-size: 18px;
-    font-weight: 600;
-    margin-left: 20px;
-
- }
-
- #startSection h1 { padding: 0; line-height: 30px; }
-
- #startSection br { margin: 10px; }
-
- #startBtn {
-
-    background: linear-gradient(180deg, #444444 0%, #000000 100%);
-    font-size: 45px;
-    width: 175px;
-    transition: transform 0.5s;
-    border-radius: 90px;
-    box-shadow: 0 2.5px 10px #000000;
-    font-family: 'Saira', sans-serif;
-    font-weight: 600;
-    border: 1px solid white;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    align-items: start;
+    gap: 30px;
 
  }
-
- #startBtn:hover { transform: scale(1.1); }
 
