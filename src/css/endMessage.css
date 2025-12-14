@@ -1,0 +1,14 @@
+
+ #endMessage {
+
+    position: absolute;
+
+    text-align: center;
+    width: max-content;
+
+    left: 25.85%;
+
+ }
+
+ #endMessage:hover { transform: scale(1.1); }
+

@@ -1,7 +1,7 @@
 
- import * as DOM from "./DOM.js";
- import * as Transitions from "./Transitions.js"
- import { state } from "./State.js"
+ import * as DOM from "./ts/DOM.js";
+ import * as Transitions from "./ts/Transitions.js"
+ import { state } from "./ts/State.js"
 
  window.addEventListener("DOMContentLoaded", async () => {
 

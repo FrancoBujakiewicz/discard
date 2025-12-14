@@ -1,6 +1,6 @@
 
- import { Option } from "./components/option/Option.js"
- import { Category } from "./components/category/Category.js"
+ import { Option } from "../components/option/Option.js"
+ import { Category } from "../components/category/Category.js"
 
  customElements.define('option-button', Option);
  customElements.define('category-button', Category);
