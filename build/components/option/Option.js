@@ -1,6 +1,6 @@
-import { state } from "../../State.js";
-import * as DOM from "../../DOM.js";
-import * as Transitions from "../../Transitions.js";
+import { state } from "../../ts/State.js";
+import * as DOM from "../../ts/DOM.js";
+import * as Transitions from "../../ts/Transitions.js";
 export class Option extends HTMLElement {
     constructor() {
         super();
@@ -23,7 +23,7 @@ export class Option extends HTMLElement {
         });
     }
     setContent({ category, poolElement }) {
-        this.img.src = `img/${category}/${poolElement}`;
+        this.img.src = `static/img/${category}/${poolElement}`;
         this.h2.textContent = poolElement.split(".")[0];
     }
 }

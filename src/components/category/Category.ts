@@ -1,8 +1,8 @@
 
  import { FetchedContentComponent } from "../FetchedContentComponent.js"
- import { state } from "../../State.js"
- import * as DOM from "../../DOM.js";
- import * as Transitions from "../../Transitions.js"
+ import { state } from "../../ts/State.js"
+ import * as DOM from "../../ts/DOM.js";
+ import * as Transitions from "../../ts/Transitions.js"
 
  export class Category extends HTMLElement implements FetchedContentComponent {
 
@@ -37,7 +37,7 @@
 
     }
 
-    setContent(): void { this.img.src = `img/category/${this.id}.png`; }
+    setContent(): void { this.img.src = `static/img/category/${this.id}.png`; }
 
  }
 
