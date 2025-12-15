@@ -21,12 +21,17 @@
 
     #startSection p {
 
-       font-size: 15px;
-       width: 275px;
+       font-size: 10px;
+       width: 225px;
 
     }
 
-    #startSection div { gap: 10px; }
+    #startSection div {
+
+       grid-template-columns: repeat(2, max-content);
+       gap: 10px;
+
+    }
 
     category-button button {
 
@@ -49,6 +54,7 @@
 
        width: 75px;
        height: 75px;
+       border-radius: 20px;
 
     }
 

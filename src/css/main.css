@@ -20,7 +20,9 @@
     display: flex;
     flex-direction: column;
     font-family: 'Saira', sans-serif;
+
     overflow: hidden;
+    overscroll-behavior: none;
 
  }
 
