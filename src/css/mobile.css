@@ -1,16 +1,23 @@
 
  @media (max-width: 768px) {
 
-    header h1 { font-size: 25px; }
+    header { height: 45px; }
+    header h1 { font-size: 20px; }
 
     a img {
 
-       height: 27.5px;
-       width: 27.5px;
+       height: 22.5px;
+       width: 22.5px;
 
     }
 
-    main { height: 75%; }
+    main {
+
+       border: 1px solid green;
+       flex: 0 0 auto;
+       height: 400px;
+
+    }
 
     #startSection {
 
@@ -84,10 +91,12 @@
 
     }
 
+    footer { flex-shrink: 0; }
     footer p { font-size: 7.5px; }
 
-    option-button:hover { transform: scale(1); }
-    category-button:hover { transform: scale(1); }
+    option-button:hover { transform: none; }
+    category-button:hover { transform: none; }
+    #endMessage:hover { transform: none; }
 
  }
 
