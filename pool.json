@@ -1,38 +1,44 @@
-
- {
-
+{
     "lang": [
-
-       "Bash.svg",
-       "C++.svg",
-       "Crystal.svg",
-       "Dart.svg",
-       "Fortran.svg",
-       "Haskell.svg",
-       "Java.svg",
-       "Julia.svg",
-       "Nim.svg",
-       "Nix.svg",
-       "Ruby.svg",
-       "Zig.svg"
-
+        "Bash.svg",
+        "Crystal.svg",
+        "C++.svg",
+        "Dart.svg",
+        "Fortran.svg",
+        "Haskell.svg",
+        "Java.svg",
+        "Julia.svg",
+        "Nim.svg",
+        "Nix.svg",
+        "Ruby.svg",
+        "Zig.svg"
     ],
-
     "linux": [
-
-       "Alpine Linux.png",
-       "Arch.svg",
-       "Artix Linux.svg",
-       "Debian.svg",
-       "Gentoo.svg",
-       "NixOS.svg"
-
+        "Alpine Linux.png",
+        "Arch.svg",
+        "Artix Linux.svg",
+        "Debian.svg",
+        "Gentoo.svg",
+        "NixOS.svg"
     ],
-
-    "dev": [],
+    "dev": [
+        "Arduino.svg",
+        "Cloudflare.svg",
+        "GitHub.svg",
+        "Git.svg",
+        "Raspberry PI.svg",
+        "Terraform.svg"
+    ],
     "framework": [],
     "llm": [],
-    "person": []
-
- }
-
+    "person": [
+        "Ada Lovelace.jpeg",
+        "Dennis Ritchie.png",
+        "Grace Hopper.jpg",
+        "Guido Van Rossum.jpg",
+        "Ken Thompson.jpeg",
+        "Linus Torvalds.jpg",
+        "Richard Stallman.jpg",
+        "Terry Devis.jpg"
+    ]
+}

@@ -63,7 +63,7 @@
 
     }
 
-    #options { gap: 20px; }
+    #options { gap: 20px; border: 1px solid green; }
 
     option-button button {
 
