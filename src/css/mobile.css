@@ -6,8 +6,8 @@
 
     a img {
 
-       height: 22.5px;
-       width: 22.5px;
+       height: 25px;
+       width: 25px;
 
     }
 
@@ -15,14 +15,14 @@
 
        border: 1px solid green;
        flex: 0 0 auto;
-       height: 450px;
+       height: 470px;
 
     }
 
     main:has(#startSection:not(.visible)) {
 
        flex: 0 0 auto;
-       height: 200px;
+       height: 375px;
 
     }
 
@@ -64,10 +64,12 @@
 
     }
 
+    #options { gap: 20px; }
+
     option-button button {
 
-       width: 75px;
-       height: 75px;
+       width: 100px;
+       height: 100px;
        border-radius: 20px;
        box-shadow: 0 2.5px 5px #000000;
 
@@ -75,27 +77,27 @@
 
     option-button button img {
 
-       width: 50px;
-       height: 50px;
+       width: 70px;
+       height: 70px;
 
     }
 
     option-button h2 {
 
        width: 100px;
-       font-size: 15px;
+       font-size: 20px;
        line-height: 20px;
 
     }
 
-    #optionHeader { font-size: 20px; }
+    #optionHeader { font-size: 25px; }
 
-    #loading { font-size: 15px; }
+    #loading { font-size: 20px; }
 
     #endMessage {
 
        left: 10%;
-       font-size: 15px;
+       font-size: 20px;
 
     }
 
