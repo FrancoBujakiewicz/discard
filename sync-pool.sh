@@ -1,5 +1,7 @@
 #!/bin/sh
 
+ # Usage: sync-pool.sh > pool.json
+
 # Array of directories to process
 dirs=("lang" "linux" "dev" "framework" "llm" "person")
 
