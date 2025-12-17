@@ -23,7 +23,7 @@ export class Option extends HTMLElement {
         });
     }
     setContent({ category, poolElement }) {
-        this.img.src = `static/img/${category}/${poolElement}`;
+        this.img.src = `static/img/${encodeURIComponent(category)}/${encodeURIComponent(poolElement)}`;
         this.h2.textContent = poolElement.split(".")[0];
     }
 }
