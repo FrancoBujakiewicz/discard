@@ -2,6 +2,8 @@
 
  # Usage: sync-pool.sh > pool.json
 
+ IMG_DIR="static/img"
+
  dirs=("lang" "linux" "dev" "framework" "llm" "person")
 
  echo "{"
@@ -11,9 +13,9 @@
     dir="${dirs[$i]}"
     echo -n "    \"$dir\": ["
 
-    if [ -d "$dir" ]; then
+    if [ -d "$IMG_DIR/$dir" ]; then
 
-       mapfile -t files < <(find "$dir" -maxdepth 1 -type f -printf "%f\n" | sort)
+       mapfile -t files < <(find "$IMG_DIR/$dir" -maxdepth 1 -type f -printf "%f\n" | sort)
        file_count=${#files[@]}
 
        if [ $((file_count % 2)) -eq 1 ] && [ $file_count -gt 0 ]; then
