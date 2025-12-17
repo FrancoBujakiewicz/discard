@@ -31,6 +31,8 @@
 
  }
 
+ option-button img[src^="static/img/person"] { border-radius: 100%; }
+
  option-button h2 {
 
     width: 270px;
