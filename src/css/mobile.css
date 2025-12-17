@@ -21,7 +21,7 @@
     main:has(#startSection:not(.visible)) {
 
        flex: 0 0 auto;
-       height: 375px;
+       height: 370px;
 
     }
 
@@ -95,7 +95,7 @@
 
     #endMessage {
 
-       left: 15%;
+       left: 10%;
        font-size: 15px;
 
     }
