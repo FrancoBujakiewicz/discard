@@ -14,7 +14,7 @@ export async function showOptions(category, opt1, opt2) {
     toggle(DOM.loading);
     DOM.options[0].setContent({ category: category, poolElement: opt1 });
     DOM.options[1].setContent({ category: category, poolElement: opt2 });
-    await delay(10);
+    //   await delay(10);
     await delay(1000);
     toggle(DOM.optionDiv);
     toggle(DOM.loading);

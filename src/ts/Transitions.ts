@@ -29,7 +29,7 @@
    DOM.options[0].setContent({ category: category, poolElement: opt1 });
    DOM.options[1].setContent({ category: category, poolElement: opt2 });
 
-   await delay(10);
+//   await delay(10);
    await delay(1000);
 
    toggle(DOM.optionDiv);

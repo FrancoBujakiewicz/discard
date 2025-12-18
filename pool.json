@@ -54,6 +54,7 @@
         "Arch.svg",
         "Arco Linux.jpg",
         "Artix Linux.svg",
+        "Bedrock Linux.png",
         "CachyOS.png",
         "CentOS.svg",
         "Debian.svg",
@@ -75,7 +76,8 @@
         "Red Hat.svg",
         "Slackware.png",
         "Tails.png",
-        "Ubuntu.png"
+        "Ubuntu.png",
+        "Void Linux.png"
     ],
     "dev": [
         "Arduino.svg",
