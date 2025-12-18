@@ -1,12 +1,12 @@
 
- import { FetchedContentComponent } from "../FetchedContentComponent.js"
+ import { ContentComponent } from "../ContentComponent.js"
  import { state } from "../../ts/State.js"
  import * as DOM from "../../ts/DOM.js";
  import * as Transitions from "../../ts/Transitions.js"
 
  export class Option extends HTMLElement
 
- implements FetchedContentComponent<{ category: string; poolElement: string }> {
+ implements ContentComponent<{ category: string; poolElement: string }> {
 
     img: HTMLImageElement;
     h2: HTMLHeadingElement;

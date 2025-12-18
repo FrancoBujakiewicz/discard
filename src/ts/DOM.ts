@@ -2,8 +2,8 @@
  import { Option } from "../components/option/Option.js"
  import { Category } from "../components/category/Category.js"
 
- customElements.define('option-button', Option);
- customElements.define('category-button', Category);
+ customElements.define('option-component', Option);
+ customElements.define('category-component', Category);
 
  let mainContent: HTMLElement;
  let startSection: HTMLElement;
@@ -33,10 +33,10 @@
 
     mainContent = document.querySelector('main')!;
     startSection = document.getElementById('startSection')!;
-    categories = document.querySelectorAll<Category>('category-button')!;
+    categories = document.querySelectorAll<Category>('category-component')!;
     optionHeader = document.getElementById('optionHeader')!;
     optionDiv = document.getElementById('options')!;
-    options = document.querySelectorAll<Option>('option-button')!;
+    options = document.querySelectorAll<Option>('option-component')!;
     loading = document.getElementById('loading')!;
     footer = document.querySelector('footer')!;
     endMessage = document.getElementById('endMessage')!;

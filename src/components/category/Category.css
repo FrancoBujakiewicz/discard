@@ -1,7 +1,7 @@
 
- category-button { transition: transform 0.6s; }
+ category-component { transition: transform 0.6s; }
 
- category-button button {
+ category-component button {
 
     padding: 20px;
     background-color: #FFFFFF;
@@ -26,7 +26,7 @@
 
  }
 
- category-button img {
+ category-component img {
 
     width: 75px;
     height: 75px;
@@ -35,5 +35,5 @@
 
  }
 
- category-button:hover { transform: scale(1.1); }
+ category-component:hover { transform: scale(1.1); }
 

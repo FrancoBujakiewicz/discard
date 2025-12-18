@@ -1,10 +1,10 @@
 
- import { FetchedContentComponent } from "../FetchedContentComponent.js"
+ import { ContentComponent } from "../ContentComponent.js"
  import { state } from "../../ts/State.js"
  import * as DOM from "../../ts/DOM.js";
  import * as Transitions from "../../ts/Transitions.js"
 
- export class Category extends HTMLElement implements FetchedContentComponent {
+ export class Category extends HTMLElement implements ContentComponent {
 
     img: HTMLImageElement;
 
