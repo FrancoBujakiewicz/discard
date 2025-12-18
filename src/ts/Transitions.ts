@@ -12,9 +12,8 @@
 
     e.ontransitionend = () => {
 
-        e.classList.remove("hidden");
-        e.classList.add("visible");
-        e.ontransitionend = null;
+       e.classList.remove("hidden");
+       e.classList.add("visible");
 
     };
 

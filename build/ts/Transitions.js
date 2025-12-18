@@ -6,7 +6,7 @@ export function show(e) {
     e.ontransitionend = () => {
         e.classList.remove("hidden");
         e.classList.add("visible");
-        e.ontransitionend = null;
+        //    e.ontransitionend = null;
     };
 }
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
